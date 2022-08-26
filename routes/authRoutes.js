@@ -6,5 +6,4 @@ const {userProtect}=require('../middleware/buyerAuthMiddleware')
 
 router.post('/register',registerUser)
 router.post('/login',loginUser)
-// router.get('/me',protect,getMe)
 module.exports=router;

@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
 
 
-const catlogSchema= new mongoose.Schema({
+const orderSchema= new mongoose.Schema({
     seller:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User',
         required:true 
     }, 
+    buyer:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required:true 
+    },
     products:[{ 
         product:{
             type:mongoose.Schema.Types.ObjectId,
@@ -16,4 +21,6 @@ const catlogSchema= new mongoose.Schema({
     }]
 })
 
-module.exports=mongoose.model('Catalog',catlogSchema)
+
+
+module.exports=mongoose.model('Order',orderSchema)
