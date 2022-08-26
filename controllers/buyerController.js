@@ -57,7 +57,7 @@ const createOrder=asyncHandler(async(req,res)=>{
         const order = await Order({
             seller: sellerId,
             buyer:req.user._id,
-            products:products
+            products:products 
          
         })
         
