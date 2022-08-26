@@ -1,3 +1,3 @@
 # Market-Place-Api
 
-Jwt secret = abdul123
+JWT_SECRET=abdul123
