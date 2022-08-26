@@ -7,16 +7,11 @@ const sellerRoutes=require("./routes/sellerRoutes")
 const buyerRoutes=require("./routes/buyerRoutes")
 
 const connectDB=require('./config/db/db')
-
-
-
 const app=express()
 
 app.use(express.json())  // middleware to print json data
 app.use(express.urlencoded({extended:false}))
   
-
-
 app.use('/api/auth',authRoutes)
 app.use('/api/seller',sellerRoutes)
 app.use('/api/buyer',buyerRoutes)
