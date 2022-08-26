@@ -52,9 +52,12 @@ const createCatalog = asyncHandler(async (req, res) => {
 // @access : private 
 
 const getOrder = asyncHandler(async (req, res) => {
+    console.log('reacaahed')
     const sellerId = req.user._id
+    
     try {
         const orders = await Order.find({ seller: sellerId }).populate('products.product')
+        console.log(orders)
         res.status(200).json(orders)
     } catch (error) {
         res.status(500).json(error)
